@@ -1,0 +1,33 @@
+using System;
+using System.Linq;
+using System.Numerics;
+using System.Text;
+using System.Collections.Generic;
+using System.Collections;
+
+
+namespace AssociativeArrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string name = Console.ReadLine();
+
+            while (name != "end")
+            {
+                StringBuilder reverse = new StringBuilder();
+
+                for (int i = name.Length - 1; i >= 0; i--)
+                {
+                    reverse.Append(name[i]);
+                }
+                Console.Write($"{name} = {reverse}");
+                Console.WriteLine();
+                
+                name = Console.ReadLine();
+            }
+        }
+    }
+}
